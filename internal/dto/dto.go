@@ -1,22 +1,31 @@
 package dto
 
 type ConfiguracionDTO struct {
-	PrecioComun int
-	PrecioPausa int
-	TarifaExtra int
+	PrecioComun float64
+	PrecioPausa float64
+	TarifaExtra float64
 }
 
 type MonopatinDTO struct {
 	Kilometros float64
-	Parada     string
+	Parada     *string
 }
 
 type CuentaDTO struct {
-	Id_cuenta  int
-    Habilitada bool
+	Id_cuenta  int64
+	Habilitada bool
 }
 
 type CobroDTO struct {
-	id_cuenta int
-	Saldo     int
+	Id_cuenta int64
+	Saldo     float64
+}
+
+type ReporteMonopatin struct {
+	Id_monopatin int64
+	Tiempo       float64
+}
+
+type ParadaDTO struct {
+	Id_parada int64
 }
